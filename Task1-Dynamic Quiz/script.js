@@ -24,7 +24,7 @@ function checkQ2() {
 // Function to check Question 3
 function checkQ3() {
     var selected = document.querySelector('input[name="q3"]:checked');
-    if ( elected.value === answer3) {
+    if (selected.value === answer3) {
         return 1;
     }
     return 0;
