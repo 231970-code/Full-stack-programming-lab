@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+}
+
+.quiz-box {
+    background: white;
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.question {
+    margin: 15px 0;
+    text-align: left;
+}
+
+button {
+    padding: 8px 15px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn {
+    background-color: green;
+    color: white;
+}
+
+.reset-btn {
+    background-color: red;
+    color: white;
+}
+
+#result {
+    font-weight: bold;
+    margin-top: 15px;
+}
