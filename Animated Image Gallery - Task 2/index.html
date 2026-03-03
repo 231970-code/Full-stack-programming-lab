@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Animated Image Gallery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+        .gallery {
+            width: 500px;
+            margin: auto;
+        }
+        img {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+        }
+        #caption {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        button {
+            margin: 15px 10px;
+            padding: 8px 15px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #prevBtn { background: gray; color: white; }
+        #nextBtn { background: #007bff; color: white; }
+
+        button:hover { opacity: 0.8; }
+    </style>
+</head>
+<body>
+
+    <h2>Animated Image Gallery</h2>
+    <div class="gallery">
+        <img id="galleryImage" src="https://picsum.photos/id/1015/500/300">
+        <div id="caption">Beautiful Mountain View</div>
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+
+            let images = [
+                {
+                    src: "https://picsum.photos/id/1015/500/300",
+                    caption: "Beautiful Mountain View"
+                },
+                {
+                    src: "https://picsum.photos/id/1025/500/300",
+                    caption: "Majestic Eagle"
+                },
+                {
+                    src: "https://picsum.photos/id/1043/500/300",
+                    caption: "Serene Beach Sunset"
+                }
+            ];
+            let currentIndex = 0;
+            function showImage(index) {
+                $("#galleryImage")
+                    .fadeOut(400)
+                    .attr("src", images[index].src)
+                    .fadeIn(400);
+
+                $("#caption")
+                    .fadeOut(400, function () {
+                        $(this)
+                            .text(images[index].caption)
+                            .fadeIn(400);
+                    });
+            }
+            $("#nextBtn").click(function () {
+                currentIndex = (currentIndex + 1) % images.length;
+                showImage(currentIndex);
+            });
+            $("#prevBtn").click(function () {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                showImage(currentIndex);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Form Validation</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            padding: 40px;
+        }
+        .form-container {
+            width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+        }
+        .error {
+            border: 2px solid red;
+            background-color: #ffe6e6;
+        }
+        .success {
+            border: 2px solid green;
+            background-color: #e6ffe6;
+        }
+        .errorMsg {
+            color: red;
+            font-size: 14px;
+            display: none;
+        }
+        #successMessage {
+            margin-top: 15px;
+            color: green;
+            font-weight: bold;
+            display: none;
+        }
+        button {
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Registration Form</h2>
+
+        <form id="myForm">
+
+            <input type="text" id="name" placeholder="Enter Name">
+            <div class="errorMsg" id="nameError">Name must be at least 3 characters</div>
+
+            <input type="email" id="email" placeholder="Enter Email">
+            <div class="errorMsg" id="emailError">Enter valid email</div>
+
+            <input type="password" id="password" placeholder="Enter Password">
+            <div class="errorMsg" id="passError">Password must be at least 6 characters</div>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="successMessage">Form Submitted Successfully!</div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#name").blur(function () {
+                if ($(this).val().length < 3) {
+                    $(this).addClass("error").removeClass("success");
+                    $("#nameError").show();
+                } else {
+                    $(this).removeClass("error").addClass("success");
+                    $("#nameError").hide();
+                }
+            });
+            $("#email").blur(function () {
+                let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+                if (!emailPattern.test($(this).val())) {
+                    $(this).addClass("error").removeClass("success");
+                    $("#emailError").show();
+                } else {
+                    $(this).removeClass("error").addClass("success");
+                    $("#emailError").hide();
+                }
+            });
+            $("#password").blur(function () {
+                if ($(this).val().length < 6) {
+                    $(this).addClass("error").removeClass("success");
+                    $("#passError").show();
+                } else {
+                    $(this).removeClass("error").addClass("success");
+                    $("#passError").hide();
+                }
+            });
+            $("#myForm").submit(function (e) {
+                e.preventDefault();
+
+                if (
+                    $("#name").hasClass("success") &&
+                    $("#email").hasClass("success") &&
+                    $("#password").hasClass("success")
+                ) {
+                    $("#successMessage").fadeIn();
+                } else {
+                    alert("Please fix errors before submitting.");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

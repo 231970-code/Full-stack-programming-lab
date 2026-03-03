@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabbed Content with Smooth Scroll</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+        }
+
+        .tabs {
+            background: #333;
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+
+        .tabs button {
+            background: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .tabs button.active {
+            background: #007bff;
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 60px 20px;
+            height: 400px;
+        }
+
+        #tab1 { background: #f8f9fa; }
+        #tab2 { background: #e9ecef; }
+        #tab3 { background: #dee2e6; }
+        #tab4 { background: #ced4da; }
+
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tabs">
+        <button data-target="#tab1" class="active">Tab 1</button>
+        <button data-target="#tab2">Tab 2</button>
+        <button data-target="#tab3">Tab 3</button>
+        <button data-target="#tab4">Tab 4</button>
+    </div>
+    <div id="tab1" class="tab-content" style="display:block;">
+        <h2>Lorem Ipsum</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </div>
+    <div id="tab2" class="tab-content">
+        <h2>Uses</h2>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+</p>
+    </div>
+    <div id="tab3" class="tab-content">
+        <h2>Context</h2>
+        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+    </div>
+    <div id="tab4" class="tab-content">
+        <h2>Standard</h2>
+        <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+
+            $(".tabs button").click(function () {
+
+                let target = $(this).data("target");
+
+                $(".tabs button").removeClass("active");
+
+                $(this).addClass("active");
+
+                $(".tab-content").fadeOut(200);
+
+                $(target).delay(200).fadeIn(400);
+
+                $("html, body").animate({
+                    scrollTop: $(target).offset().top - 50
+                }, 600);
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>
