@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="My Account - HotSpring Portable Spas" />
+    <title>My Account - HotSpring Portable Spas</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../css/style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="../../index.html">
+          <i class="fas fa-spa"></i> HotSpring Portable Spas
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../category.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../cart.html">
+                <i class="fas fa-shopping-cart"></i> Cart
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="my-account.html">
+                <i class="fas fa-user"></i> Account
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero-section" style="padding: 3rem 0">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="display-4">My Account</h1>
+          <p class="lead">Manage your account settings and orders</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Account Dashboard -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Sidebar -->
+          <div class="col-lg-3">
+            <div class="account-sidebar">
+              <div class="text-center mb-4">
+                <div
+                  class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center"
+                  style="width: 80px; height: 80px"
+                >
+                  <i class="fas fa-user fa-2x"></i>
+                </div>
+                <h5 class="mt-3 mb-0">John Smith</h5>
+                <p class="text-muted">john.smith@email.com</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item active">
+                  <i class="fas fa-tachometer-alt me-2"></i> Dashboard
+                </li>
+                <li class="list-group-item">
+                  <a
+                    href="edit-account.html"
+                    class="text-decoration-none text-dark d-block"
+                  >
+                    <i class="fas fa-user-edit me-2"></i> Edit Profile
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a
+                    href="order-summary.html"
+                    class="text-decoration-none text-dark d-block"
+                  >
+                    <i class="fas fa-shopping-bag me-2"></i> Orders
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a
+                    href="edit-billing.html"
+                    class="text-decoration-none text-dark d-block"
+                  >
+                    <i class="fas fa-credit-card me-2"></i> Billing Address
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a
+                    href="edit-shipping.html"
+                    class="text-decoration-none text-dark d-block"
+                  >
+                    <i class="fas fa-truck me-2"></i> Shipping Address
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a
+                    href="../login.html"
+                    class="text-decoration-none text-danger d-block"
+                  >
+                    <i class="fas fa-sign-out-alt me-2"></i> Logout
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Main Content -->
+          <div class="col-lg-9">
+            <!-- Welcome Message -->
+            <div class="alert alert-success mb-4">
+              <i class="fas fa-check-circle"></i> Welcome back, John! Your
+              account is in good standing.
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="row g-4 mb-4">
+              <div class="col-md-4">
+                <div class="card text-center h-100">
+                  <div class="card-body">
+                    <i class="fas fa-shopping-bag fa-3x text-primary mb-3"></i>
+                    <h3 class="mb-2">5</h3>
+                    <p class="text-muted mb-0">Total Orders</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card text-center h-100">
+                  <div class="card-body">
+                    <i class="fas fa-clock fa-3x text-warning mb-3"></i>
+                    <h3 class="mb-2">1</h3>
+                    <p class="text-muted mb-0">Pending Orders</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card text-center h-100">
+                  <div class="card-body">
+                    <i class="fas fa-dollar-sign fa-3x text-success mb-3"></i>
+                    <h3 class="mb-2">$18K</h3>
+                    <p class="text-muted mb-0">Total Spent</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recent Orders -->
+            <div class="card mb-4">
+              <div class="card-header bg-white">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h5 class="mb-0">Recent Orders</h5>
+                  <a
+                    href="order-summary.html"
+                    class="btn btn-sm btn-outline-primary"
+                    >View All</a
+                  >
+                </div>
+              </div>
+              <div class="card-body p-0">
+                <div class="table-responsive">
+                  <table class="table table-hover mb-0">
+                    <thead class="table-light">
+                      <tr>
+                        <th>Order ID</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>#ORD-001245</td>
+                        <td>March 5, 2026</td>
+                        <td>
+                          <span class="badge bg-warning">Processing</span>
+                        </td>
+                        <td>$5,806.08</td>
+                        <td>
+                          <a
+                            href="order-details.html"
+                            class="btn btn-sm btn-primary"
+                            >View</a
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#ORD-001198</td>
+                        <td>Feb 20, 2026</td>
+                        <td><span class="badge bg-success">Delivered</span></td>
+                        <td>$4,999.00</td>
+                        <td>
+                          <a
+                            href="order-details.html"
+                            class="btn btn-sm btn-primary"
+                            >View</a
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#ORD-001142</td>
+                        <td>Jan 15, 2026</td>
+                        <td><span class="badge bg-success">Delivered</span></td>
+                        <td>$6,499.00</td>
+                        <td>
+                          <a
+                            href="order-details.html"
+                            class="btn btn-sm btn-primary"
+                            >View</a
+                          >
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Account Information -->
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="card h-100">
+                  <div class="card-header bg-white">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h5 class="mb-0">Account Details</h5>
+                      <a
+                        href="edit-account.html"
+                        class="btn btn-sm btn-outline-primary"
+                        >Edit</a
+                      >
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <p class="mb-2"><strong>Name:</strong> John Smith</p>
+                    <p class="mb-2">
+                      <strong>Email:</strong> john.smith@email.com
+                    </p>
+                    <p class="mb-0"><strong>Phone:</strong> (555) 123-4567</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card h-100">
+                  <div class="card-header bg-white">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h5 class="mb-0">Shipping Address</h5>
+                      <a
+                        href="edit-shipping.html"
+                        class="btn btn-sm btn-outline-primary"
+                        >Edit</a
+                      >
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <p class="mb-1">John Smith</p>
+                    <p class="mb-1">123 Main Street</p>
+                    <p class="mb-1">Apt 4B</p>
+                    <p class="mb-0">New York, NY 10001</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <h5>About HotSpring Portable Spas</h5>
+            <p>
+              We provide premium quality portable spas with exceptional customer
+              service.
+            </p>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5>Quick Links</h5>
+            <a href="../category.html">Products</a>
+            <a href="../about.html">About Us</a>
+            <a href="../contact.html">Contact</a>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5>Customer Service</h5>
+            <a href="my-account.html">My Account</a>
+            <a href="../cart.html">Shopping Cart</a>
+            <a href="../contact.html">Help & Support</a>
+          </div>
+          <div class="col-lg-3 mb-4">
+            <h5>Contact Info</h5>
+            <p><i class="fas fa-phone me-2"></i> (555) 123-4567</p>
+            <p><i class="fas fa-envelope me-2"></i> info@hotspringspas.com</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 HotTub Store. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../../js/main.js"></script>
+  </body>
+</html>

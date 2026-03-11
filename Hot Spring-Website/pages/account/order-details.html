@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Details - HotSpring Portable Spas</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="../../index.html"
+          ><i class="fas fa-spa"></i> HotSpring Portable Spas</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../category.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="my-account.html"
+                ><i class="fas fa-user"></i> Account</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-section" style="padding: 3rem 0">
+      <div class="container">
+        <div class="hero-content"><h1 class="display-4">Order Details</h1></div>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-3">
+            <div class="account-sidebar">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <a
+                    href="my-account.html"
+                    class="text-decoration-none text-dark d-block"
+                    ><i class="fas fa-tachometer-alt me-2"></i> Dashboard</a
+                  >
+                </li>
+                <li class="list-group-item">
+                  <a
+                    href="edit-account.html"
+                    class="text-decoration-none text-dark d-block"
+                    ><i class="fas fa-user-edit me-2"></i> Edit Profile</a
+                  >
+                </li>
+                <li class="list-group-item active">
+                  <i class="fas fa-shopping-bag me-2"></i> Orders
+                </li>
+                <li class="list-group-item">
+                  <a
+                    href="edit-billing.html"
+                    class="text-decoration-none text-dark d-block"
+                    ><i class="fas fa-credit-card me-2"></i> Billing Address</a
+                  >
+                </li>
+                <li class="list-group-item">
+                  <a
+                    href="edit-shipping.html"
+                    class="text-decoration-none text-dark d-block"
+                    ><i class="fas fa-truck me-2"></i> Shipping Address</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-9">
+            <div class="card mb-4">
+              <div
+                class="card-header bg-white d-flex justify-content-between align-items-center"
+              >
+                <div>
+                  <h5 class="mb-1">Order #ORD-001245</h5>
+                  <small class="text-muted">Placed on March 5, 2026</small>
+                </div>
+                <span class="badge bg-warning">Processing</span>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-4 mb-3">
+                    <h6 class="text-muted">Shipping Address</h6>
+                    <p class="mb-0">
+                      John Smith<br />123 Main Street<br />Apt 4B<br />New York,
+                      NY 10001
+                    </p>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <h6 class="text-muted">Payment Method</h6>
+                    <p class="mb-0">
+                      <i class="fas fa-credit-card"></i> Visa ending in 1234
+                    </p>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <h6 class="text-muted">Order Summary</h6>
+                    <p class="mb-0">
+                      3 items<br />Total: <strong>$5,806.08</strong>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-4">
+              <div class="card-header bg-white">
+                <h5 class="mb-0">Order Items</h5>
+              </div>
+              <div class="card-body">
+                <div class="row mb-3 pb-3 border-bottom">
+                  <div class="col-md-2">
+                    <div class="bg-light p-3 rounded text-center">
+                      <i class="fas fa-hot-tub fa-3x text-primary"></i>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <h6>Luxury Spa 4000</h6>
+                    <p class="text-muted mb-0">Color: Pearl White | Qty: 1</p>
+                  </div>
+                  <div class="col-md-4 text-md-end">
+                    <h5 class="text-primary">$4,999.00</h5>
+                  </div>
+                </div>
+                <div class="row mb-3 pb-3 border-bottom">
+                  <div class="col-md-2">
+                    <div class="bg-light p-3 rounded text-center">
+                      <i class="fas fa-box fa-3x text-primary"></i>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <h6>Premium Cover</h6>
+                    <p class="text-muted mb-0">Color: Brown | Qty: 1</p>
+                  </div>
+                  <div class="col-md-4 text-md-end">
+                    <h5 class="text-primary">$199.00</h5>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-2">
+                    <div class="bg-light p-3 rounded text-center">
+                      <i class="fas fa-flask fa-3x text-primary"></i>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <h6>Chemical Starter Kit</h6>
+                    <p class="text-muted mb-0">Qty: 2</p>
+                  </div>
+                  <div class="col-md-4 text-md-end">
+                    <h5 class="text-primary">$178.00</h5>
+                  </div>
+                </div>
+
+                <hr />
+
+                <div class="row">
+                  <div class="col-md-8"></div>
+                  <div class="col-md-4">
+                    <div class="d-flex justify-content-between mb-2">
+                      <span>Subtotal:</span><strong>$5,376.00</strong>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                      <span>Shipping:</span
+                      ><strong class="text-success">FREE</strong>
+                    </div>
+                    <div class="d-flex justify-content-between mb-3">
+                      <span>Tax (8%):</span><strong>$430.08</strong>
+                    </div>
+                    <hr />
+                    <div class="d-flex justify-content-between">
+                      <h5>Total:</h5>
+                      <h5 class="text-primary">$5,806.08</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header bg-white">
+                <h5 class="mb-0">Order Timeline</h5>
+              </div>
+              <div class="card-body">
+                <div class="timeline">
+                  <div class="mb-3">
+                    <i class="fas fa-check-circle text-success"></i>
+                    <strong>Order Placed</strong> - March 5, 2026, 10:30 AM
+                  </div>
+                  <div class="mb-3">
+                    <i class="fas fa-check-circle text-success"></i>
+                    <strong>Payment Confirmed</strong> - March 5, 2026, 10:32 AM
+                  </div>
+                  <div class="mb-3">
+                    <i class="fas fa-spinner fa-spin text-warning"></i>
+                    <strong>Processing</strong> - In progress
+                  </div>
+                  <div class="mb-3 text-muted">
+                    <i class="far fa-circle"></i> <strong>Shipped</strong> -
+                    Pending
+                  </div>
+                  <div class="text-muted">
+                    <i class="far fa-circle"></i> <strong>Delivered</strong> -
+                    Pending
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4">
+              <a href="order-summary.html" class="btn btn-outline-primary"
+                ><i class="fas fa-arrow-left"></i> Back to Orders</a
+              >
+              <button class="btn btn-primary">
+                <i class="fas fa-print"></i> Print Invoice
+              </button>
+              <button class="btn btn-outline-secondary">
+                <i class="fas fa-headset"></i> Contact Support
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-bottom pt-3">
+          <p>&copy; 2026 HotTub Store. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="../../js/main.js"></script>
+  </body>
+</html>
