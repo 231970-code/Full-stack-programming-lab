@@ -29,8 +29,8 @@ env
 *.env
 
 # Ignore local project folders not part of this repo
-Lab 13/
-Lab_12-rustik_plank-E-commerce website/
+#Lab 13/
+#Lab_12-rustik_plank-E-commerce website/
 
 # Ignore lockfiles for generated package manager installs if they are not intentionally tracked
 # (Remove these if your repo should keep lockfiles under version control)
