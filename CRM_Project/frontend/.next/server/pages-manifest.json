@@ -1,0 +1,9 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/dashboard/customers": "pages/dashboard/customers.js",
+  "/dashboard/invoices/create": "pages/dashboard/invoices/create.js",
+  "/dashboard/invoices": "pages/dashboard/invoices.js",
+  "/dashboard/chatbot": "pages/dashboard/chatbot.js"
+}
